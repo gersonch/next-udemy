@@ -2,6 +2,8 @@ import Image from "next/image";
 import { IoBrowsersOutline, IoCalculator, IoLogoReact } from "react-icons/io5";
 import { SidebarMenuItem } from "./SidebarMenuItem";
 
+import { CgPokemon } from "react-icons/cg";
+
 const menuItems = [
   {
     path: "/dashboard/main",
@@ -15,6 +17,12 @@ const menuItems = [
     title: "Counter",
     subTitle: "Contador Client Side",
   },
+  {
+    path: "/dashboard/pokemon",
+    icon: <CgPokemon size={40} />,
+    title: "Pokemon",
+    subTitle: "Generacion estática",
+  },
 ];
 
 export const Sidebar = () => {
@@ -22,7 +30,7 @@ export const Sidebar = () => {
     <div
       style={{ width: "500px" }}
       id="menu"
-      className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64  left-0 h-screen overflow-y-scroll"
+      className="bg-gray-900 min-h-screen z-10 text-slate-300 w-64 fixed left-0 h-screen "
     >
       <div id="logo" className="my-4 px-6">
         <h1 className="flex items-center text-lg md:text-2xl font-bold text-white">
